@@ -1,0 +1,29 @@
+.artboard {
+  border: 10px solid rgb(255, 255, 255)(255, 255, 255);
+  height: 812px;
+  width:  375px;
+  overflow: hidden;
+  z-index: 1;
+}
+.shapeshifter {
+  scale: 105%;
+  animation-duration: 1000ms;
+  animation-timing-function: steps(30);
+  width: 376px;
+  height: 812px;
+  background-repeat: no-repeat;
+  animation-fill-mode:forwards;
+}
+.shapeshifter.play {
+  animation-name: play30;
+}
+
+@keyframes play30 {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: -11280px 0px;
+  }
+}
+

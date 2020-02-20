@@ -1,0 +1,21 @@
+@keyframes play24 {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: -8976px 0px;
+  }
+}
+.shapeshifter {
+  animation-duration: 1s;
+  animation-timing-function: steps(24);
+  width: 374px;
+  height: 374px;
+  background-repeat: no-repeat;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+.shapeshifter.play {
+  animation-name: play24;
+}

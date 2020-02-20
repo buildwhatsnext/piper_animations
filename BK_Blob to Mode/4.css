@@ -1,0 +1,107 @@
+.artboard {
+    background-color: #48567B;
+    border: 10px solid rgb(255, 255, 255)(255, 255, 255);
+    height: 812px;
+    width:  375px;
+    overflow: hidden ;
+    z-index: 2;
+    animation-name: colorchange;
+    animation-duration: 2s;
+    animation-delay: 500ms;
+    animation-fill-mode: forwards;
+ }
+
+ .arrow {
+     position: relative;
+     top: 300px;
+     left: -120px;
+     scale: 200%;
+     z-index: 1;
+     animation-name: moveup;
+     animation-duration: 4s;
+     animation-delay: 500ms;
+     animation-fill-mode: forwards;
+      }
+
+ .dash {
+     scale: 300%;
+     position: relative;
+     top: -350px;
+     left: -370px;
+     animation-name: getout;
+     animation-duration: 2s;
+     animation-fill-mode: forwards;
+    }
+    
+
+ @keyframes colorchange {
+     0%{
+        background-color: #48567B ;
+     }
+     100%{
+         background-color: white;
+     }
+
+    }
+  
+ @keyframes getout { 
+    0%, 50% {
+        margin-left: 0;
+      }
+      25% {
+        margin-left: -20px;
+      }
+      100% {
+          position: relative;
+          top: -700px;
+         left: -700px;
+      }
+  }
+
+  @keyframes moveup {
+      0% {
+          scale: 200%;
+          position: relative;
+          top: 300px;
+          left: -120px;
+      }
+
+      15% {
+        scale: 205%;
+        position: relative;
+        top: 130px;
+        left: -120px;
+        }
+
+       50% , 100%  {
+            scale: 200%;
+            position: relative;
+            top: 150px;
+            left: -120px;
+        }
+
+        62.5%{
+            scale: 200%;
+            position: relative;
+            top: 155px;
+            left: -125px;
+        }
+        
+        75%{
+            scale: 200%;
+            position: relative;
+            top: 135px;
+            left: -118px;
+        }
+        77.5%{
+            scale: 200%;
+            position: relative;
+            top: 145px;
+            left: -11250px;
+        }
+
+    
+      }
+  }
+
+ }

@@ -1,0 +1,183 @@
+
+
+.boundary {
+    position: absolute;
+    left: 350px;
+    top: 200px;
+    border: 1px solid black;
+    height: 600px;
+    width: 300px;
+    overflow: hidden;
+}
+
+#waves {
+    position: absolute;
+    top: 0px;
+}
+
+.triangle {
+    /* arrow */
+    position: relative;
+    width: 600px;
+    top: -1500px;
+    left: -300px;
+    z-index: 1;
+    stroke: #1c2743;
+    stroke-width: 500px;
+    stroke-linecap: round;
+    fill: none;
+    animation: swell 40s ease -1.25s infinite,
+    wave 35s ease-in-out -.125s infinite,
+    colortriangle 40s ease-in-out infinite;
+    animation-play-state: running;
+    cursor: pointer;
+}
+
+.circle {
+    /* circle */
+    position: relative;
+    width: 1500px;
+    top: -200px;
+    left: -440px;
+    stroke: #4a577a;
+    stroke-width: 500px;
+    stroke-linecap: round;
+    fill: none;
+    animation: swell 50s ease -1.25s infinite,
+    wave 50s ease-in-out -.125s infinite,
+    colorcircle 40s ease-in-out infinite; 
+    animation-play-state: running;
+    cursor: pointer;
+}
+
+.line {
+    /* line */
+    position: relative;
+    rotate: 90deg;
+    width: 700px;
+    top: -2270px;
+    left: -400px;
+    stroke: #8b67fb;
+    stroke-width: 500px;
+    stroke-linecap: round;
+    fill: none;
+    rotate: 0deg;
+    animation: swell 52s ease -1.25s infinite reverse, 
+    wave 51s ease-in-out -.125s infinite alternate-reverse,
+    colorline 40s ease-in-out infinite;
+    transform: rotate(45deg);
+    transition-duration: 5s;
+    animation-play-state: running;
+    cursor: pointer;
+    z-index: 1;    
+}
+
+
+@keyframes rotate {
+    0%, 100% {
+        rotate: 30deg;
+    }
+
+    50% {
+        rotate: 60deg;
+    }
+}
+@keyframes wave {
+    0%, 100% {
+      margin-left: 0;
+    }
+
+    25% {
+        margin-right: -100px;
+        
+    }
+
+    50% {
+        margin-left: -100px;
+        rotate: 45deg;
+      
+    }
+}
+  
+@keyframes swell {
+    0%, 100% {
+      transform: translate3d(50px,-50px,30px);
+    }
+    50% {
+      transform: translate3d(100px,50px,30px);
+    }
+}
+
+@keyframes colorline {
+    0%, 100% {
+        stroke: #8b67fb;
+    }
+
+    25% {
+        stroke: #4a577a;
+    }
+
+
+    50% {
+        stroke: #1c2743;
+    }
+
+    75% {
+        stroke: white;
+    }
+}
+
+@keyframes colorcircle {
+    0%, 100% {
+        stroke: #4a577a;
+    }
+
+    25% {
+        stroke: #1c2743;
+    }
+
+    50% {
+        stroke: white;
+    }
+
+    75% {
+        stroke: #8b67fb;
+    }
+}
+
+@keyframes colortriangle {
+    0%, 100% {
+        stroke: #1c2743;
+    }
+
+    25% {
+        stroke: white;
+    }
+
+    50% {
+        stroke: #8b67fb;
+    }
+
+    75% {
+        stroke: #4a577a;
+    }
+
+}
+
+
+/* 
+
+@keyframes moveupslow {
+    0%{transform: translateY(0px);}
+    100%{transform: translateY(-90px);}
+}
+
+@keyframes moveupmid {
+    0%{transform: translateY(0px);}
+    100%{transform: translateY(-110px);}
+}
+
+@keyframes moveupfast {
+    0%{transform: translateY(0px);}
+    100%{transform: translateY(-130px);}
+} */

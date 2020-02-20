@@ -1,0 +1,42 @@
+.artboard {
+  border:10px solid rgb(255, 255, 255)(255, 255, 255);
+  height: 812px;
+  width:  375px;
+  overflow:hidden ;
+  z-index: 1; 
+}
+.shapeshifter {
+  position: relative;
+  top: -290px;
+  left: -540px;
+  animation-duration: 1000ms;
+  animation-timing-function: steps(18);
+  width: 1187px;
+  height: 1424px;
+  background-repeat: no-repeat;
+  animation-fill-mode: forwards;
+}
+.shapeshifter.play {
+  animation-name: play18;
+}
+
+@keyframes play18 {
+  0% {
+    background-color: #ffff;
+    background-position: 0px 0px;
+    scale: 85%;
+  }
+  60% {
+    background-color: #ffff ;
+  }
+
+  100% {
+    position: relative;
+     top: -210px;
+     left: -540px;
+    background-color: #202C4D;
+    background-position: -21366px 0px;
+    scale: 85%;
+  }
+}
+
